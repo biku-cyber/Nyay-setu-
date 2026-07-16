@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="as">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>সংবিধান অসম — অসমীয়া আইন গ্ৰন্থাগাৰ</title>
+<meta name="description" content="অসমীয়া ভাষাত ভাৰতৰ সংবিধান আৰু মুখ্য আইনসমূহৰ সন্দৰ্ভ গ্ৰন্থাগাৰ">
+<meta name="theme-color" content="#2F4A3C">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&family=Noto+Serif+Bengali:wght@400;600&family=Noto+Sans+Bengali:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="app" id="appRoot">
+  <div class="fringe"></div>
+  <header class="topbar" id="topbar"></header>
+  <main class="screen" id="screen"></main>
+  <nav class="bottom-nav hidden" id="bottomNav"></nav>
+</div>
+
+<div class="search-overlay hidden" id="searchOverlay">
+  <div class="search-input-row">
+    <button class="icon-btn" id="btnSearchClose"></button>
+    <input type="text" id="searchInput" placeholder="সন্ধান কৰক..." autocomplete="off">
+  </div>
+  <div class="search-results" id="searchResults"></div>
+</div>
+
+<div class="modal-backdrop hidden" id="disclaimerModal">
+  <div class="modal-card">
+    <h2>দাবী ত্যাগ</h2>
+    <p>এই এপ্‌টোত থকা আইনী তথ্য যথাসম্ভৱ শুদ্ধ ৰাখিবলৈ চেষ্টা কৰা হৈছে, কিন্তু আইন আৰু সংশোধনীসমূহ সময়ে সময়ে সলনি হ'ব পাৰে। গুৰুত্বপূৰ্ণ আইনী বিষয়ত ভাৰ নিৰ্ভৰ কৰাৰ পূৰ্বে সদায় চৰকাৰী প্ৰকাশনৰ সৈতে সত্যাপন কৰক। এই এপ্‌ কেৱল শিক্ষামূলক আৰু সন্দৰ্ভৰ বাবে, ই আইনী পৰামৰ্শ নহয়।</p>
+    <button class="accept-btn" id="disclaimerAccept">বুজি পালোঁ</button>
+    <button class="icon-btn hidden" id="disclaimerClose" style="position:absolute;top:16px;right:16px"></button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data-loader.js"></script>
+<script src="js/search.js"></script>
+<script src="js/tts.js"></script>
+<script src="js/wakelock.js"></script>
+<script src="js/app.js"></script>
+<script>
+  document.getElementById("btnSearchClose").innerHTML = icon("close");
+  document.getElementById("disclaimerClose").innerHTML = icon("close");
+</script>
+</body>
+</html>
